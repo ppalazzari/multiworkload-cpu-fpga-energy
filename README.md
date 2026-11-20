@@ -77,4 +77,8 @@ The FPGA kernels themselves are not part of this repository.
 
 ## License
 
-<!-- to be chosen by the authors, e.g. MIT for the code and CC BY 4.0 for the data -->
+The code (orchestrator, campaign scripts, analysis and model scripts) is released
+under the license in the `LICENSE` file. The data (`data/raw/` and `data/derived/`)
+are released under the Creative Commons Attribution 4.0 International license
+(CC BY 4.0, https://creativecommons.org/licenses/by/4.0/): they can be shared and
+adapted, provided that the paper above is cited.
