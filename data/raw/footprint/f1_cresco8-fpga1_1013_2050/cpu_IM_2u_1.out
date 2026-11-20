@@ -1,0 +1,44 @@
+[CPU:IM] Matched files: 1
+[CPU:IM] Will process:  48
+[CPU:IM] OMP_THREADS:   48
+[CPU:IM] OPENCV_THREADS:1
+[CPU:IM] save_output:   0
+[CPU:IM] All images loaded in RAM
+[CPU:IM] Total processing time (no I/O): 37.299 s
+[CPU:IM] Total images processed (including repetitions): 6192
+[CPU:IM] Avg per processing: 0.00602373 s
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  IM      2   60.08   21.50     607     7645    273.9  0.2635
+  priorita' energia: IM
+  priorita' tempo  : IM
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                    43.0       45.9
+ripartizione                 43.0       45.9   <- T_A=0.0 T_B=43.0 c=0
+tutto FPGA                  125.6       90.6
+
+risparmio previsto: 0.0% vs CPU, 49.3% vs FPGA
+
+sequenza FPGA: (vuota)
+sequenza CPU : IM(2)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  22:36:54
+<<< END    22:37:32
+
+==================================================================
+  FPGA
+     tot   calcolo      0.0 s   transizioni    0.0 s   (0.00% del makespan)
+  CPU
+     IM    calcolo     37.3 s
+     tot   calcolo     37.3 s   transizioni    0.0 s   (0.00% del makespan)
+
+  MAKESPAN 37.4 s   (previsto 43.0 s, scarto -13.0%)
+
+  Finestra: 1791923814.950 -> 1791923852.363 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/f1_cresco8-fpga1_1013_2050/runs.tsv

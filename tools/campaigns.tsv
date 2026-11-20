@@ -1,0 +1,13 @@
+# campaign	paper	raw folders under ~/energy_comparisons/work/raw (exact names or globs), comma-separated
+parameters	Table 4, Sec. 5.3	car_cresco8-fpga2_1011_2205,qp8_cresco8-fpga2_1011_1531
+reconfiguration	t_cfg and E_cfg, Sec. 5.3	ecfg_cresco8-fpga1_1012_1317
+footprint	Table S2	f1_cresco8-fpga1_1013_2050
+interference	Table 9	coppie_cresco8-fpga2_1010_1745,coppieqp_cresco8-fpga2_1011_0850
+A	Sec. 6.1.1, Tables 6-7	a2_cresco8-fpga2_1010_1035
+B	Sec. 6.1.2, Table 8	b2a_cresco8-fpga2_1012_0858,b2b_cresco8-fpga1_1013_0941,b2r_cresco8-fpga2_1013_0938,b2r3_cresco8-fpga2_1013_2044
+juxtaposed	Sec. 6.1.2, Table 14	jx_cresco8-fpga2_1022_1401
+equal_work	Sec. 6.3, Fig. 2b, Table S4	s12A_cresco8-fpga1_1119_1055,s12B_cresco8-fpga2_1119_1056
+random	Sec. 6.3, Fig. 2a	cas_shared_cresco8-fpga1_1027_1028,cas_static_cresco8-fpga2_1027_1028
+C	Sec. 6.4.1, Table 11	fase1_1001_1206
+D	Sec. 6.4.2, Table 12, Table S3	notte_1001_2312
+E	Sec. 6.5, Table 13	c2_cresco8-fpga1_1002_1930,c2_cresco8-fpga2_1002_1930

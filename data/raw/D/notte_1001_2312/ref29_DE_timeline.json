@@ -1,0 +1,31 @@
+{
+  "tag": "ref29_DE",
+  "units": {
+    "deflate": 4
+  },
+  "alloc": {
+    "deflate": 0
+  },
+  "previsione": {
+    "T": 150.68,
+    "E": 140358.42,
+    "TA": 0.0,
+    "TB": 150.68,
+    "c": 0
+  },
+  "t_start": 1790890442.0294635,
+  "t_end": 1790890649.8735938,
+  "makespan_s": 207.84413027763367,
+  "sequenze": {
+    "FPGA": [],
+    "CPU": [
+      {
+        "workload": "deflate",
+        "transizione_s": 0.0,
+        "calcolo_s": 207.78056001663208,
+        "t_start": 1790890442.0295248,
+        "t_end": 1790890649.8100848
+      }
+    ]
+  }
+}

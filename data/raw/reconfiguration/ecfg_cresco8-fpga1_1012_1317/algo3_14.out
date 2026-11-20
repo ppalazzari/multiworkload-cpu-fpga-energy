@@ -1,0 +1,20 @@
+INFO: Reading ~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin
+Loading: '~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin'
+INFO: FPGA_DEVICE=1 -> device[1], nessun ripiego
+Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+Device[1]: program successful!
+Read Lamborghini_4096x4096_24bpp
+@@READY
+@@DONE
+computation ended. Writing output file
+done
+Processed 1 (4096x4096) images 
+Image Size = 16777216 pixels
+Overall processing elapsed time : 48633.000000 us
+Write BW : 1973.968293 MB/sec
+Nb clock cycles to process the images : 9483435.000000
+Nb pixels/cycle processed : 10.614645
+Number of operations performed: 48648867600.000000
+Number of operations/cycle performed: 5129.878319
+sustained speed : 931.626439 GOp/s
+PROCESSING IMAGE FINISHED

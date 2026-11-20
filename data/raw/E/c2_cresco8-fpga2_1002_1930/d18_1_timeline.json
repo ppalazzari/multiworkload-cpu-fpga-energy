@@ -1,0 +1,89 @@
+{
+  "tag": "d18_1",
+  "units": {
+    "algo3": 30,
+    "deflate": 30,
+    "qpdyn": 30,
+    "nbody": 30
+  },
+  "alloc": {
+    "algo3": 0,
+    "deflate": 18,
+    "qpdyn": 30,
+    "nbody": 30
+  },
+  "previsione": {
+    "T": 3772.62,
+    "E": 3147693.192,
+    "TA": 3772.62,
+    "TB": 1097.04,
+    "c": 3
+  },
+  "t_start": 1790971481.3980377,
+  "t_end": 1790973386.5700958,
+  "makespan_s": 1905.1720581054688,
+  "sequenze": {
+    "FPGA0": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 678.6148190498352,
+        "t_start": 1790971481.3981018,
+        "t_end": 1790972160.0129209
+      },
+      {
+        "workload": "nbody",
+        "transizione_s": 14.679590225219727,
+        "calcolo_s": 668.0410931110382,
+        "t_start": 1790972174.6925647,
+        "t_end": 1790972842.7336578
+      },
+      {
+        "workload": "deflate",
+        "transizione_s": 6.833326101303101,
+        "calcolo_s": 536.8895344734192,
+        "t_start": 1790972849.5670438,
+        "t_end": 1790973386.4565783
+      }
+    ],
+    "FPGA1": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 677.8600585460663,
+        "t_start": 1790971481.3981218,
+        "t_end": 1790972159.2581804
+      },
+      {
+        "workload": "nbody",
+        "transizione_s": 11.68529200553894,
+        "calcolo_s": 667.9524734020233,
+        "t_start": 1790972170.9435565,
+        "t_end": 1790972838.89603
+      },
+      {
+        "workload": "deflate",
+        "transizione_s": 6.977263689041138,
+        "calcolo_s": 536.2586438655853,
+        "t_start": 1790972845.8733456,
+        "t_end": 1790973382.1319895
+      }
+    ],
+    "CPU": [
+      {
+        "workload": "deflate",
+        "transizione_s": 0.0,
+        "calcolo_s": 454.69525122642517,
+        "t_start": 1790971481.3981364,
+        "t_end": 1790971936.0933876
+      },
+      {
+        "workload": "algo3",
+        "transizione_s": 1.6044464111328125,
+        "calcolo_s": 1088.1161077022552,
+        "t_start": 1790971937.6978564,
+        "t_end": 1790973025.8139641
+      }
+    ]
+  }
+}

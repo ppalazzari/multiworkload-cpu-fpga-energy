@@ -1,0 +1,31 @@
+{
+  "tag": "cpu_DE_2u_2",
+  "units": {
+    "deflate": 2
+  },
+  "alloc": {
+    "deflate": 0
+  },
+  "previsione": {
+    "T": 75.34,
+    "E": 70179.21,
+    "TA": 0.0,
+    "TB": 75.34,
+    "c": 0
+  },
+  "t_start": 1791929307.6873467,
+  "t_end": 1791929384.413427,
+  "makespan_s": 76.72608041763306,
+  "sequenze": {
+    "FPGA": [],
+    "CPU": [
+      {
+        "workload": "deflate",
+        "transizione_s": 0.0,
+        "calcolo_s": 76.66255307197571,
+        "t_start": 1791929307.687386,
+        "t_end": 1791929384.349939
+      }
+    ]
+  }
+}

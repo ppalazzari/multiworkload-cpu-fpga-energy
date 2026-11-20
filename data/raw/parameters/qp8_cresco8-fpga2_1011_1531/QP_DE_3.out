@@ -1,0 +1,110 @@
+[CPU:QP] worker: 8 istanze x 4 thread = 32 core
+[CPU:QP]   unita' per istanza: [416, 416, 416, 416, 416, 415, 415, 415]
+[CPU:QP]   core di partenza  : [0, 4, 8, 12, 24, 28, 32, 36]
+[CPU:QP]   thread principali : [16, 17, 18, 19, 40, 41, 42, 43]
+[CPU:QP]   esempio: taskset -c 16 ~/qp-dyn/cpu/build/qp_dyn_quad_omp ~/energy_comparisons/work/data/qpdyn 416
+[CPU:QP] [inst1] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst1] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst1] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst0] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst1] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst0] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst0] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst0] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst2] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst2] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst2] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst2] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst3] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst3] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst3] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst3] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst4] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst4] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst4] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst4] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst5] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst5] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst5] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst5] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst6] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst6] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst6] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst6] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst7] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst7] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst7] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst7] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[FPGA:DE] Found Platform
+[FPGA:DE] Platform Name: Xilinx
+[FPGA:DE] INFO: Reading ~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:DE] Loading: '~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:DE] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:DE] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[CPU:QP] tutte le istanze pronte
+[FPGA:DE] Device[0]: program successful!
+[FPGA:DE] MAX_MEM_ALLOC_SIZE = 4 GB
+[FPGA:DE] GLOBAL_MEM_SIZE    = 0 GB
+[FPGA:DE] XRT build version: 2.19.194
+[FPGA:DE] Build hash: 7d8151e6ee73c6ec2e99501a58c9c2eca6cc68ce
+[FPGA:DE] Build date: 2025-05-18 11:45:44
+[FPGA:DE] Git branch: 2025.1
+[FPGA:DE] PID: 876967
+[FPGA:DE] UID: 28063
+[FPGA:DE] [Sun Oct 11 18:16:55 2026 GMT]
+[FPGA:DE] HOST: cresco8-fpga2.portici.enea.it
+[FPGA:DE] EXE: ~/energy_comparisons/work/hosts_dev/deflate_host_dev
+[FPGA:DE] [XRT] WARNING: unaligned host pointer '0x7ffc8de82030' detected, this leads to extra memcpy
+[CPU:QP] [inst0] unita': 416  tempo: 277.857 s  throughput: 0.374 GB/s
+[CPU:QP] [inst1] unita': 416  tempo: 278.000 s  throughput: 0.374 GB/s
+[CPU:QP] [inst2] unita': 416  tempo: 274.889 s  throughput: 0.378 GB/s
+[CPU:QP] [inst3] unita': 416  tempo: 276.815 s  throughput: 0.376 GB/s
+[CPU:QP] [inst4] unita': 416  tempo: 275.737 s  throughput: 0.377 GB/s
+[CPU:QP] [inst5] unita': 415  tempo: 274.776 s  throughput: 0.378 GB/s
+[CPU:QP] [inst6] unita': 415  tempo: 275.902 s  throughput: 0.376 GB/s
+[CPU:QP] [inst7] unita': 415  tempo: 275.233 s  throughput: 0.377 GB/s
+[CPU:QP] worker: 278.00 s per 3325 unita'
+[FPGA:DE] Input File Size = 953482739712 [B]
+[FPGA:DE] Output File Size = -1122601088 [B]
+[FPGA:DE] Deflating elapsed time : 481747701.000000 usec
+[FPGA:DE] Throughput = 1887.527430 [MB/sec]
+[FPGA:DE] 
+[FPGA:DE] Logger stopped
+[FPGA:DE] CONVERTER TEST PASSED
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  QP      5   45.19   59.55     325    14072    536.1  0.5686
+  DE      8   59.14   37.67     834     8269    353.8  0.3891
+  priorita' energia: QP > DE
+  priorita' tempo  : QP > DE
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                   599.1      563.1
+ripartizione                478.5      417.7   <- T_A=478.5 T_B=297.8 c=1
+tutto FPGA                  709.9      513.7
+
+risparmio previsto: 25.8% vs CPU, 18.7% vs FPGA
+
+sequenza FPGA: DE(8)
+sequenza CPU : QP(5)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  20:16:55
+<<< END    20:24:57
+
+==================================================================
+  FPGA
+     DE    calcolo    481.7 s
+     tot   calcolo    481.7 s   transizioni    0.0 s   (0.00% del makespan)
+  CPU
+     QP    calcolo    278.0 s
+     tot   calcolo    278.0 s   transizioni    0.0 s   (0.00% del makespan)
+
+  MAKESPAN 481.9 s   (previsto 478.5 s, scarto +0.7%)
+
+  Finestra: 1791742615.442 -> 1791743097.304 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/qp8_cresco8-fpga2_1011_1531/runs.tsv

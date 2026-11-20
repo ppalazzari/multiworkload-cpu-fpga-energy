@@ -1,0 +1,4 @@
+# notte 1001_2312  nodo cresco8-fpga2.portici.enea.it
+# governor performance
+# git e240aed registro multi-workload; varianti con pinning di run_multi e del worker multi-istanza
+# log potenza /tmp/notte_power_1001_2312.log

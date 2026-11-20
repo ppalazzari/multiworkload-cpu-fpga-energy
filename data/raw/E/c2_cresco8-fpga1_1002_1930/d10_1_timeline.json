@@ -1,0 +1,89 @@
+{
+  "tag": "d10_1",
+  "units": {
+    "algo3": 30,
+    "deflate": 30,
+    "qpdyn": 30,
+    "nbody": 30
+  },
+  "alloc": {
+    "algo3": 0,
+    "deflate": 10,
+    "qpdyn": 30,
+    "nbody": 30
+  },
+  "previsione": {
+    "T": 3299.5,
+    "E": 2870309.2800000003,
+    "TA": 3299.5,
+    "TB": 1398.4,
+    "c": 3
+  },
+  "t_start": 1790967546.4357293,
+  "t_end": 1790969482.048508,
+  "makespan_s": 1935.6127786636353,
+  "sequenze": {
+    "FPGA0": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 677.7258138656616,
+        "t_start": 1790967546.4358633,
+        "t_end": 1790968224.1616771
+      },
+      {
+        "workload": "nbody",
+        "transizione_s": 12.59709119796753,
+        "calcolo_s": 668.0646493434906,
+        "t_start": 1790968236.7588122,
+        "t_end": 1790968904.8234615
+      },
+      {
+        "workload": "deflate",
+        "transizione_s": 6.378295183181763,
+        "calcolo_s": 299.36826825141907,
+        "t_start": 1790968911.201815,
+        "t_end": 1790969210.5700831
+      }
+    ],
+    "FPGA1": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 677.724568605423,
+        "t_start": 1790967546.4359217,
+        "t_end": 1790968224.1604903
+      },
+      {
+        "workload": "nbody",
+        "transizione_s": 11.311180114746094,
+        "calcolo_s": 667.9589314460754,
+        "t_start": 1790968235.4717488,
+        "t_end": 1790968903.4306803
+      },
+      {
+        "workload": "deflate",
+        "transizione_s": 6.808896064758301,
+        "calcolo_s": 303.83489775657654,
+        "t_start": 1790968910.2396364,
+        "t_end": 1790969214.0745342
+      }
+    ],
+    "CPU": [
+      {
+        "workload": "deflate",
+        "transizione_s": 0.0,
+        "calcolo_s": 915.5947377681732,
+        "t_start": 1790967546.4359715,
+        "t_end": 1790968462.0307093
+      },
+      {
+        "workload": "algo3",
+        "transizione_s": 1.5769100189208984,
+        "calcolo_s": 1018.3269491195679,
+        "t_start": 1790968463.6076837,
+        "t_end": 1790969481.9346328
+      }
+    ]
+  }
+}

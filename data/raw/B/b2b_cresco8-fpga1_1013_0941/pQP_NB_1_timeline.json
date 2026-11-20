@@ -1,0 +1,41 @@
+{
+  "tag": "pQP_NB_1",
+  "units": {
+    "qpdyn": 5,
+    "nbody": 15
+  },
+  "alloc": {
+    "qpdyn": 0,
+    "nbody": 15
+  },
+  "previsione": {
+    "T": 673.5,
+    "E": 604006.425,
+    "TA": 673.5,
+    "TB": 297.75,
+    "c": 1
+  },
+  "t_start": 1791904065.0081084,
+  "t_end": 1791904733.0543604,
+  "makespan_s": 668.0462520122528,
+  "sequenze": {
+    "FPGA": [
+      {
+        "workload": "nbody",
+        "transizione_s": 0.0,
+        "calcolo_s": 667.9327058792114,
+        "t_start": 1791904065.0081592,
+        "t_end": 1791904732.940865
+      }
+    ],
+    "CPU": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 439.6751654148102,
+        "t_start": 1791904065.0081441,
+        "t_end": 1791904504.6833096
+      }
+    ]
+  }
+}

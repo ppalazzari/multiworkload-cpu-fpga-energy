@@ -1,0 +1,40 @@
+{
+  "tag": "verifica_qp",
+  "units": {
+    "qpdyn": 4
+  },
+  "alloc": {
+    "qpdyn": 4
+  },
+  "previsione": {
+    "T": 186.16,
+    "E": 133847.392,
+    "TA": 186.16,
+    "TB": 0.0,
+    "c": 1
+  },
+  "t_start": 1790962879.710714,
+  "t_end": 1790962970.2597651,
+  "makespan_s": 90.54905104637146,
+  "sequenze": {
+    "FPGA0": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 90.3353579044342,
+        "t_start": 1790962879.710755,
+        "t_end": 1790962970.046113
+      }
+    ],
+    "FPGA1": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 90.3354127407074,
+        "t_start": 1790962879.7107716,
+        "t_end": 1790962970.0461843
+      }
+    ],
+    "CPU": []
+  }
+}

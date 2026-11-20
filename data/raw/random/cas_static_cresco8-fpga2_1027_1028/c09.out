@@ -1,0 +1,160 @@
+[CPU:QP] worker: 5 istanze x 4 thread = 20 core
+[CPU:QP]   unita' per istanza: [931, 931, 931, 931, 931]
+[CPU:QP]   core di partenza  : [0, 4, 8, 12, 24]
+[CPU:QP]   thread principali : [16, 17, 18, 19, 28]
+[CPU:QP]   esempio: taskset -c 16 ~/qp-dyn/cpu/build/qp_dyn_quad_omp ~/energy_comparisons/work/data/qpdyn 931
+[CPU:QP] [inst0] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst0] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst0] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst0] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst1] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst1] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst1] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst1] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst2] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst2] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst2] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst2] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst3] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst3] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst3] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst3] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst4] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst4] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst4] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst4] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[FPGA:QP] Blocco       : 256 MB (16777216 parole da 128 bit)
+[FPGA:QP] Iterazioni   : 1995
+[FPGA:QP] Dati totali  : 498.75 GB
+[FPGA:QP] INFO: Reading ~/workspace/QP_DYN/migr_quad_u55c/build/binary_container_1.xclbin
+[CPU:QP] tutte le istanze pronte
+[FPGA:QP] INFO: device[0] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:33:00.1
+[FPGA:QP] INFO: device[1] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:cc:00.1
+[FPGA:QP] INFO: QP_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:QP] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:QP] Device[0]: program successful!
+[FPGA:QP] DEVICE_USED index=0 bdf=0000:33:00.1
+[FPGA:QP] INFO: QP_CUS=1 unita' di calcolo
+[FPGA:QP] Dati generati in RAM (seme fisso)
+[FPGA:QP] 
+[FPGA:QP] --- risultati ---
+[FPGA:QP] H2C (fuori misura) : 25132 us;  BW = 10186.2 MB/s
+[FPGA:QP] C2H (fuori misura) : 20974 us;  BW = 12205.6 MB/s
+[FPGA:QP] Tempo di cifratura : 1.35502e+08 us (135.502 s)
+[FPGA:QP] Per iterazione     : 67920.7 us
+[FPGA:QP] Throughput         : 3769.1 MB/s
+[FPGA:QP] TEST FINISHED
+[FPGA:NB] n_bodies :1036800 T:2 threads: 1 dt: 0.001000
+[FPGA:NB] INFO: Reading ~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:NB] Loading: '~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:NB] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:NB] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:NB] Device[0]: program successful!
+[FPGA:NB] Simulated 1036800 particles
+[FPGA:NB] computing time: 89.056206
+[FPGA:DE] Found Platform
+[FPGA:DE] Platform Name: Xilinx
+[FPGA:DE] INFO: Reading ~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:DE] Loading: '~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:DE] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:DE] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:DE] Device[0]: program successful!
+[FPGA:DE] MAX_MEM_ALLOC_SIZE = 4 GB
+[FPGA:DE] GLOBAL_MEM_SIZE    = 0 GB
+[FPGA:DE] XRT build version: 2.19.194
+[FPGA:DE] Build hash: 7d8151e6ee73c6ec2e99501a58c9c2eca6cc68ce
+[FPGA:DE] Build date: 2025-05-18 11:45:44
+[FPGA:DE] Git branch: 2025.1
+[FPGA:DE] PID: 3356181
+[FPGA:DE] UID: 28063
+[FPGA:DE] [Tue Oct 27 13:46:38 2026 GMT]
+[FPGA:DE] HOST: cresco8-fpga2.portici.enea.it
+[FPGA:DE] EXE: ~/energy_comparisons/work/hosts_dev/deflate_host_dev
+[FPGA:DE] [XRT] WARNING: unaligned host pointer '0x7ffdfb2c8760' detected, this leads to extra memcpy
+[CPU:QP] [inst0] unita': 931  tempo: 617.481 s  throughput: 0.377 GB/s
+[CPU:QP] [inst1] unita': 931  tempo: 619.498 s  throughput: 0.376 GB/s
+[CPU:QP] [inst2] unita': 931  tempo: 616.536 s  throughput: 0.378 GB/s
+[CPU:QP] [inst3] unita': 931  tempo: 616.557 s  throughput: 0.377 GB/s
+[CPU:QP] [inst4] unita': 931  tempo: 618.306 s  throughput: 0.376 GB/s
+[CPU:QP] worker: 619.50 s per 4655 unita'
+[CPU:NB] n_bodies=1036800  thread=29  unita'=8  EPS=1e-07
+[FPGA:DE] Input File Size = 1191853424640 [B]
+[FPGA:DE] Output File Size = -1403251360 [B]
+[FPGA:DE] Deflating elapsed time : 587198275.000000 usec
+[FPGA:DE] Throughput = 1935.700509 [MB/sec]
+[FPGA:DE] 
+[FPGA:DE] Logger stopped
+[FPGA:DE] CONVERTER TEST PASSED
+[FPGA:IM] INFO: Reading ~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin
+[FPGA:IM] Loading: '~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin'
+[FPGA:IM] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:IM] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:IM] Device[0]: program successful!
+[FPGA:IM] Read Lamborghini_4096x4096_24bpp
+[FPGA:IM] computation ended. Writing output file
+[FPGA:IM] done
+[FPGA:IM] Processed 15535 (4096x4096) images 
+[FPGA:IM] Image Size = 16777216 pixels
+[FPGA:IM] Overall processing elapsed time : 300009139.000000 us
+[FPGA:IM] Write BW : 2485.524283 MB/sec
+[FPGA:IM] Nb clock cycles to process the images : 58501782105.000000
+[FPGA:IM] Nb pixels/cycle processed : 13.365442
+[FPGA:IM] Number of operations performed: 375143773873656.000000
+[FPGA:IM] Number of operations/cycle performed: 6412.518737
+[FPGA:IM] sustained speed : 1164.564075 GOp/s
+[FPGA:IM] PROCESSING IMAGE FINISHED
+[CPU:NB] unita': 8  tempo: 730.957 s  per unita': 91.3697 s  throughput: 10.957 GPair/s
+[CPU:IM] Matched files: 1
+[CPU:IM] Will process:  48
+[CPU:IM] OMP_THREADS:   29
+[CPU:IM] OPENCV_THREADS:1
+[CPU:IM] save_output:   0
+[CPU:IM] All images loaded in RAM
+[CPU:IM] Total processing time (no I/O): 149.847 s
+[CPU:IM] Total images processed (including repetitions): 15552
+[CPU:IM] Avg per processing: 0.00963519 s
+pinning: CPU=0-28 (29 thread)  FPGA host=29-47
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  QP     10   45.19   59.55     325    14072    536.1  0.5686
+  NB     10   44.54   58.55    3608    15533    520.1  0.5680
+  DE     10   59.14   37.67     834     8269    353.8  0.3891
+  IM     10   60.08   21.50     607     7645    273.9  0.2635
+  priorita' energia: QP > NB > DE > IM
+  priorita' tempo  : QP > NB > DE > IM
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                  1772.7     1717.4
+ripartizione               1138.0     1090.9   <- T_A=1138.0 T_B=992.8 c=4
+tutto FPGA                 2111.1     1556.8
+
+risparmio previsto: 36.5% vs CPU, 29.9% vs FPGA
+
+sequenza FPGA: QP(3) -> NB(2) -> DE(10) -> IM(5)
+sequenza CPU : QP(7) -> NB(8) -> IM(5)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  14:42:35
+<<< END    15:09:09
+
+==================================================================
+  FPGA
+     QP    calcolo    135.5 s
+     NB    calcolo     89.1 s   transizione   12.2 s
+     DE    calcolo    587.2 s   transizione    6.5 s
+     IM    calcolo    300.0 s   transizione    6.5 s
+     tot   calcolo   1111.8 s   transizioni   25.1 s   (1.58% del makespan)
+  CPU
+     QP    calcolo    619.5 s
+     NB    calcolo    731.0 s   transizione   92.0 s
+     IM    calcolo    149.8 s   transizione    1.3 s
+     tot   calcolo   1500.3 s   transizioni   93.4 s   (5.86% del makespan)
+
+  MAKESPAN 1593.7 s   (previsto 1138.0 s, scarto +40.0%)
+
+  Finestra: 1793108555.722 -> 1793110149.440 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/cas_static_cresco8-fpga2_1027_1028/runs.tsv

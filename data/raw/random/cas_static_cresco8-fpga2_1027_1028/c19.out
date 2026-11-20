@@ -1,0 +1,205 @@
+[CPU:QP] worker: 5 istanze x 4 thread = 20 core
+[CPU:QP]   unita' per istanza: [1330, 1330, 1330, 1330, 1330]
+[CPU:QP]   core di partenza  : [0, 4, 8, 12, 24]
+[CPU:QP]   thread principali : [16, 17, 18, 19, 28]
+[CPU:QP]   esempio: taskset -c 16 ~/qp-dyn/cpu/build/qp_dyn_quad_omp ~/energy_comparisons/work/data/qpdyn 1330
+[CPU:QP] [inst0] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst1] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst1] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst1] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst1] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst0] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst0] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst0] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst2] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst2] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst2] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst2] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst3] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst3] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst3] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst3] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[CPU:QP] [inst4] Matrix source: qp_dyn_matrices.h (HLS hardcoded values)
+[CPU:QP] [inst4] size_in_bytes=268435456 sent_words=16777216 nb_rounds=1
+[CPU:QP] [inst4] Modulo reduction: Barrett (FPGA-equivalent)
+[CPU:QP] [inst4] Parallelismo: 4 thread, spinlock, affinità, granularità N=8 (184 parole/sync)
+[FPGA:NB] n_bodies :1036800 T:6 threads: 1 dt: 0.001000
+[FPGA:NB] INFO: Reading ~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:NB] Loading: '~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:NB] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:NB] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[CPU:QP] tutte le istanze pronte
+[FPGA:NB] Device[0]: program successful!
+[FPGA:NB] Simulated 1036800 particles
+[FPGA:NB] computing time: 267.214944
+[FPGA:DE] Found Platform
+[FPGA:DE] Platform Name: Xilinx
+[FPGA:DE] INFO: Reading ~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:DE] Loading: '~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:DE] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:DE] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:DE] Device[0]: program successful!
+[FPGA:DE] MAX_MEM_ALLOC_SIZE = 4 GB
+[FPGA:DE] GLOBAL_MEM_SIZE    = 0 GB
+[FPGA:DE] XRT build version: 2.19.194
+[FPGA:DE] Build hash: 7d8151e6ee73c6ec2e99501a58c9c2eca6cc68ce
+[FPGA:DE] Build date: 2025-05-18 11:45:44
+[FPGA:DE] Git branch: 2025.1
+[FPGA:DE] PID: 3514055
+[FPGA:DE] UID: 28063
+[FPGA:DE] [Tue Oct 27 18:34:51 2026 GMT]
+[FPGA:DE] HOST: cresco8-fpga2.portici.enea.it
+[FPGA:DE] EXE: ~/energy_comparisons/work/hosts_dev/deflate_host_dev
+[FPGA:DE] [XRT] WARNING: unaligned host pointer '0x7ffc88091c70' detected, this leads to extra memcpy
+[FPGA:DE] Input File Size = 1072668082176 [B]
+[FPGA:DE] Output File Size = 884557424 [B]
+[FPGA:DE] Deflating elapsed time : 528635249.000000 usec
+[FPGA:DE] Throughput = 1935.126350 [MB/sec]
+[FPGA:DE] 
+[FPGA:DE] Logger stopped
+[FPGA:DE] CONVERTER TEST PASSED
+[FPGA:IM] INFO: Reading ~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin
+[FPGA:IM] Loading: '~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin'
+[FPGA:IM] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:IM] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:IM] Device[0]: program successful!
+[FPGA:IM] Read Lamborghini_4096x4096_24bpp
+[CPU:QP] [inst0] unita': 1330  tempo: 886.486 s  throughput: 0.375 GB/s
+[CPU:QP] [inst1] unita': 1330  tempo: 888.201 s  throughput: 0.374 GB/s
+[CPU:QP] [inst2] unita': 1330  tempo: 879.675 s  throughput: 0.378 GB/s
+[CPU:QP] [inst3] unita': 1330  tempo: 883.244 s  throughput: 0.376 GB/s
+[CPU:QP] [inst4] unita': 1330  tempo: 874.973 s  throughput: 0.380 GB/s
+[CPU:QP] worker: 888.20 s per 6650 unita'
+[CPU:NB] n_bodies=1036800  thread=29  unita'=4  EPS=1e-07
+[FPGA:IM] computation ended. Writing output file
+[FPGA:IM] done
+[FPGA:IM] Processed 21749 (4096x4096) images 
+[FPGA:IM] Image Size = 16777216 pixels
+[FPGA:IM] Overall processing elapsed time : 419946509.000000 us
+[FPGA:IM] Write BW : 2485.916605 MB/sec
+[FPGA:IM] Nb clock cycles to process the images : 81889569255.000000
+[FPGA:IM] Nb pixels/cycle processed : 13.367551
+[FPGA:IM] Number of operations performed: 525201142494504.000000
+[FPGA:IM] Number of operations/cycle performed: 6413.529187
+[FPGA:IM] sustained speed : 1164.747580 GOp/s
+[FPGA:IM] PROCESSING IMAGE FINISHED
+[CPU:NB] unita': 4  tempo: 365.491 s  per unita': 91.3727 s  throughput: 10.957 GPair/s
+[CPU:DE]   maschera ricevuta : 0-28 (29 core)
+[CPU:DE] worker: 29 istanze x 1 thread = 29 core
+[CPU:DE]   unita' per istanza: [31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]
+[CPU:DE]   core di partenza  : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+[CPU:DE]   esempio: ~/deflate/cpu/build/deflate_cpu ~/energy_comparisons/work/data/deflate/wiki_1GB.xml 31 128 0
+[CPU:DE] [inst24] blocco 128 MB, 30 unita', rapporto 2.55927x, core 24
+[CPU:DE] [inst26] blocco 128 MB, 30 unita', rapporto 2.55927x, core 26
+[CPU:DE] [inst25] blocco 128 MB, 30 unita', rapporto 2.55927x, core 25
+[CPU:DE] [inst27] blocco 128 MB, 30 unita', rapporto 2.55927x, core 27
+[CPU:DE] [inst2] blocco 128 MB, 31 unita', rapporto 2.55927x, core 2
+[CPU:DE] [inst3] blocco 128 MB, 31 unita', rapporto 2.55927x, core 3
+[CPU:DE] [inst1] blocco 128 MB, 31 unita', rapporto 2.55927x, core 1
+[CPU:DE] [inst0] blocco 128 MB, 31 unita', rapporto 2.55927x, core 0
+[CPU:DE] [inst5] blocco 128 MB, 31 unita', rapporto 2.55927x, core 5
+[CPU:DE] [inst6] blocco 128 MB, 31 unita', rapporto 2.55927x, core 6
+[CPU:DE] [inst4] blocco 128 MB, 31 unita', rapporto 2.55927x, core 4
+[CPU:DE] [inst7] blocco 128 MB, 31 unita', rapporto 2.55927x, core 7
+[CPU:DE] [inst9] blocco 128 MB, 31 unita', rapporto 2.55927x, core 9
+[CPU:DE] [inst8] blocco 128 MB, 31 unita', rapporto 2.55927x, core 8
+[CPU:DE] [inst11] blocco 128 MB, 31 unita', rapporto 2.55927x, core 11
+[CPU:DE] [inst13] blocco 128 MB, 31 unita', rapporto 2.55927x, core 13
+[CPU:DE] [inst14] blocco 128 MB, 31 unita', rapporto 2.55927x, core 14
+[CPU:DE] [inst16] blocco 128 MB, 31 unita', rapporto 2.55927x, core 16
+[CPU:DE] [inst15] blocco 128 MB, 31 unita', rapporto 2.55927x, core 15
+[CPU:DE] [inst10] blocco 128 MB, 31 unita', rapporto 2.55927x, core 10
+[CPU:DE] [inst12] blocco 128 MB, 31 unita', rapporto 2.55927x, core 12
+[CPU:DE] [inst17] blocco 128 MB, 31 unita', rapporto 2.55927x, core 17
+[CPU:DE] [inst19] blocco 128 MB, 30 unita', rapporto 2.55927x, core 19
+[CPU:DE] [inst22] blocco 128 MB, 30 unita', rapporto 2.55927x, core 22
+[CPU:DE] [inst20] blocco 128 MB, 30 unita', rapporto 2.55927x, core 20
+[CPU:DE] [inst28] blocco 128 MB, 30 unita', rapporto 2.55927x, core 28
+[CPU:DE] [inst21] blocco 128 MB, 30 unita', rapporto 2.55927x, core 21
+[CPU:DE] [inst23] blocco 128 MB, 30 unita', rapporto 2.55927x, core 23
+[CPU:DE] [inst18] blocco 128 MB, 30 unita', rapporto 2.55927x, core 18
+[CPU:DE] tutte le istanze pronte
+[CPU:DE] [inst0] unita': 31  tempo: 52.2845 s  throughput: 0.0741138 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst1] unita': 31  tempo: 52.2583 s  throughput: 0.0741509 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst2] unita': 31  tempo: 52.1926 s  throughput: 0.0742442 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst3] unita': 31  tempo: 52.1246 s  throughput: 0.0743411 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst4] unita': 31  tempo: 52.4484 s  throughput: 0.0738822 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst5] unita': 31  tempo: 52.1558 s  throughput: 0.0742967 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst6] unita': 31  tempo: 52.1185 s  throughput: 0.0743498 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst7] unita': 31  tempo: 52.2103 s  throughput: 0.0742191 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst8] unita': 31  tempo: 52.2045 s  throughput: 0.0742274 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst9] unita': 31  tempo: 52.1854 s  throughput: 0.0742545 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst10] unita': 31  tempo: 52.3117 s  throughput: 0.0740752 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst11] unita': 31  tempo: 52.146 s  throughput: 0.0743106 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst12] unita': 31  tempo: 52.4102 s  throughput: 0.073936 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst13] unita': 31  tempo: 52.1826 s  throughput: 0.0742585 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst14] unita': 31  tempo: 52.2778 s  throughput: 0.0741233 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst15] unita': 31  tempo: 52.2842 s  throughput: 0.0741142 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst16] unita': 31  tempo: 52.1827 s  throughput: 0.0742583 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst17] unita': 31  tempo: 52.2071 s  throughput: 0.0742236 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst18] unita': 30  tempo: 50.5594 s  throughput: 0.0741702 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst19] unita': 30  tempo: 50.6246 s  throughput: 0.0740747 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst20] unita': 30  tempo: 50.5699 s  throughput: 0.0741547 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst21] unita': 30  tempo: 50.549 s  throughput: 0.0741854 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst22] unita': 30  tempo: 50.4771 s  throughput: 0.0742912 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst23] unita': 30  tempo: 50.7088 s  throughput: 0.0739516 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst24] unita': 30  tempo: 50.4641 s  throughput: 0.0743102 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst25] unita': 30  tempo: 50.5598 s  throughput: 0.0741696 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst26] unita': 30  tempo: 50.5257 s  throughput: 0.0742196 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst27] unita': 30  tempo: 50.5446 s  throughput: 0.0741918 GB/s  rapporto medio: 2.55927x
+[CPU:DE] [inst28] unita': 30  tempo: 50.5776 s  throughput: 0.0741435 GB/s  rapporto medio: 2.55927x
+[CPU:DE] worker: 52.45 s per 888 unita'
+[CPU:IM] Matched files: 1
+[CPU:IM] Will process:  48
+[CPU:IM] OMP_THREADS:   29
+[CPU:IM] OPENCV_THREADS:1
+[CPU:IM] save_output:   0
+[CPU:IM] All images loaded in RAM
+[CPU:IM] Total processing time (no I/O): 89.9492 s
+[CPU:IM] Total images processed (including repetitions): 9312
+[CPU:IM] Avg per processing: 0.00965949 s
+pinning: CPU=0-28 (29 thread)  FPGA host=29-47
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  QP     10   45.19   59.55     325    14072    536.1  0.5686
+  NB     10   44.54   58.55    3608    15533    520.1  0.5680
+  DE     10   59.14   37.67     834     8269    353.8  0.3891
+  IM     10   60.08   21.50     607     7645    273.9  0.2635
+  priorita' energia: QP > NB > DE > IM
+  priorita' tempo  : QP > NB > DE > IM
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                  1772.7     1717.4
+ripartizione               1236.3     1147.7   <- T_A=1236.3 T_B=931.9 c=3
+tutto FPGA                 2111.1     1556.8
+
+risparmio previsto: 33.2% vs CPU, 26.3% vs FPGA
+
+sequenza FPGA: NB(6) -> DE(9) -> IM(7)
+sequenza CPU : QP(10) -> NB(4) -> DE(1) -> IM(3)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  19:30:17
+<<< END    19:55:09
+
+==================================================================
+  FPGA
+     NB    calcolo    267.2 s
+     DE    calcolo    528.6 s   transizione    6.5 s
+     IM    calcolo    419.9 s   transizione    6.5 s
+     tot   calcolo   1215.8 s   transizioni   13.0 s   (0.87% del makespan)
+  CPU
+     QP    calcolo    888.2 s
+     NB    calcolo    365.5 s   transizione   92.0 s
+     DE    calcolo     52.4 s   transizione    1.9 s
+     IM    calcolo     89.9 s   transizione    1.4 s
+     tot   calcolo   1396.1 s   transizioni   95.3 s   (6.39% del makespan)
+
+  MAKESPAN 1491.4 s   (previsto 1236.3 s, scarto +20.6%)
+
+  Finestra: 1793125817.752 -> 1793127309.194 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/cas_static_cresco8-fpga2_1027_1028/runs.tsv

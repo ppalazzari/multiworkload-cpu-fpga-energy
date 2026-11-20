@@ -1,0 +1,7 @@
+# qp8 1011_1531  nodo cresco8-fpga2  QP CPU 8 istanze 4+4, thread principali vincolati
+# governor performance (iniziale schedutil, ripristino con il profilo cresco8)
+# tuned 
+# xrt  Version : 2.19.194
+# kernel 5.14.0-427.13.1.el9_4.x86_64
+# avvio 2026-10-09 13:16:11
+# log potenza /tmp/qp8_power_1011_1531.log

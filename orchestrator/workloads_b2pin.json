@@ -1,0 +1,291 @@
+{
+  "_commento": [
+    "Descrittore dei workload per run_split.py.",
+    "Ogni workload definisce l'unita' di processamento e, per ciascun",
+    "dispositivo (fpga / cpu), il binario e i suoi argomenti.",
+    "",
+    "Segnaposto utilizzabili in 'args':",
+    "  {n_units}   unita' assegnate a questo dispositivo",
+    "  {n_items}   elementi assegnati = n_units * unit_items",
+    "  {threads}   thread OpenMP (solo cpu)",
+    "  {xclbin}    percorso dell'xclbin (solo fpga)",
+    "  qualunque chiave definita in 'consts'",
+    "  qualunque chiave definita in 'derived' (espressione Python)",
+    "",
+    "In 'derived' sono disponibili: n_units, n_items, threads e le consts.",
+    "",
+    "t_unit_s e' il tempo per unita' IN REGIME CONCORRENTE (non isolato):",
+    "e' quello che determina il punto di bilanciamento reale."
+  ],
+  "_globals": {
+    "_nota": "parametri del nodo, usati da run_multi.py",
+    "nodo": "cresco8-fpga1",
+    "P_idle_W": 712.0,
+    "t_cfg_s": 5.4,
+    "E_cfg_J": 0.0,
+    "_nota_tcfg": "5.4 s = riconfigurazione a freddo (misura 16-09-2026, 9 campioni: IM 5.10 DE 5.27 QP 4.29 s di media; la prima di ogni bitstream e' piu' lenta per la lettura da AFS). E_cfg ancora da misurare: il suo peso e' sotto il per mille.",
+    "_nota_pin": "variante per run_multi_pin.py: istanze di QP e DE legate a {ncpu}, core assegnati dentro la maschera",
+    "fpga_devices": [
+      {
+        "index": 0,
+        "bdf": "0000:33:00.1"
+      },
+      {
+        "index": 1,
+        "bdf": "0000:cc:00.1"
+      }
+    ]
+  },
+  "algo3": {
+    "descrizione": "Image Processing: mediano 5x5 + 3x gaussiano 7x7 + gaussiano 5x5, RGB 4096x4096",
+    "unit_items": 3107,
+    "item_label": "immagini",
+    "misurato": {
+      "data": "2026-09-10",
+      "nodo": "cresco8-fpga1",
+      "P_idle_W": 717.4,
+      "P_fpga_W": 727.5,
+      "P_cpu_W": 1073.0,
+      "n_ottimo_su_33": 8,
+      "nota": "minimo interno confermato; minimo di energia coincide con minimo di tempo"
+    },
+    "fpga": {
+      "bin": "~/energy_comparisons/work/hosts_dev/ImgProc_plus_Deflate_dev",
+      "xclbin": "~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin",
+      "args": [
+        "1",
+        "{n_items}",
+        "{xclbin}"
+      ],
+      "t_unit_s": 60.08,
+      "P_incr_W": 10.1,
+      "device_env": "FPGA_DEVICE"
+    },
+    "cpu": {
+      "bin": "~/algo3/cpu/build/algo3_batch_omp",
+      "consts": {
+        "glob": "~/workspace/TestFiles/*.bmp",
+        "cpu_images": 48
+      },
+      "derived": {
+        "nrep": "max(1, round(n_items / cpu_images))"
+      },
+      "args": [
+        "{cpu_images}",
+        "{threads}",
+        "1",
+        "{nrep}",
+        "{glob}",
+        "0"
+      ],
+      "t_unit_s": 21.5,
+      "t_unit_isolato_s": 18.84,
+      "nota": "48 thread OpenMP, schedule(dynamic,1) su un ciclo unico immagini x ripetizioni. In regime concorrente +14% rispetto all'isolamento: e' contesa reale (l'host FPGA occupa un core e Algo3 usa tutti e 48), non sbilanciamento. Prima della correzione al ciclo la dispersione era del 26% e bastava a spostare l'ottimo della ripartizione fra n_DE=4 e 5.",
+      "P_incr_W": 355.6,
+      "env": {
+        "OPENCV_LOG_LEVEL": "ERROR",
+        "_nota": "silenzia i messaggi [INFO] di inizializzazione di OpenCV"
+      }
+    },
+    "_riscalatura": "unita' portata da 3024 a 3107 immagini (fattore 1.0274) perche' duri 60 s sul dispositivo piu' lento (FPGA). t_unit_s sono i valori IMPLICITI dalle campagne in regime concorrente, riscalati.",
+    "_nota_multi": "t_unit_s aggiornati dalla campagna multi-workload del 16-09-2026 (media sui punti, regime a piu' carichi)"
+  },
+  "qpdyn": {
+    "descrizione": "QP-DYN stream cipher, 4 pipeline in XOR (robustezza a Grover), dati residenti in memoria",
+    "unit_items": 665,
+    "item_label": "blocchi da 256 MB",
+    "misurato": {
+      "data": "2026-09-11",
+      "nodo": "cresco8-fpga1",
+      "scheda": "0000:cc:00.1 (la gemella 0000:33:00.x ha il management guasto)",
+      "fpga_GBs": 3.68,
+      "cpu_GBs": 2.77,
+      "rapporto": 1.33,
+      "unita_GB": 50,
+      "nota": [
+        "Le 4 pipeline combinano le chiavi in XOR sulla STESSA parola da 128 bit:",
+        "aumentano la robustezza crittografica, non la banda. Throughput FPGA",
+        "= 250 MHz x 16 B = 4 GB/s teorici, 92% raggiunto.",
+        "CPU: massimo a 9 istanze (45 thread su 48 core). A 12 istanze i 60",
+        "thread totali saturano il nodo e il throughput dimezza.",
+        "Condizione di minimo interno ampiamente soddisfatta: punto di",
+        "bilanciamento atteso al 59% su FPGA.",
+        "P_A e P_B ancora da misurare."
+      ],
+      "verifica_concorrente": {
+        "data": "2026-09-11",
+        "run": "N=10 unita', n_A=6 (scelta da --split-auto)",
+        "fpga_s": 81.52,
+        "cpu_s": 72.19,
+        "makespan_s": 81.52,
+        "aggregato_GBs": 6.13,
+        "nota": "Sbilanciamento 11.4% ma n_A=6 e' comunque l'ottimo intero per N=10 (n_A=5 darebbe 90.2 s, n_A=7 darebbe 95.1 s): e' granularita', non errore di calibrazione. Con N=30 lo sbilanciamento scende a 1.6%. La FPGA non risente della concorrenza (-2.3%); l'aggregato e' il 95% della somma dei throughput isolati."
+      }
+    },
+    "fpga": {
+      "bin": "~/qp-dyn/hls/build/host/qp_dyn_power_mdev",
+      "xclbin": "~/workspace/QP_DYN/migr_quad_u55c/build/binary_container_1.xclbin",
+      "args": [
+        "{xclbin}",
+        "{n_items}",
+        "256"
+      ],
+      "t_unit_s": 45.19,
+      "P_incr_W": 7.2,
+      "device_env": "QP_DEVICE"
+    },
+    "cpu": {
+      "bin": "~/energy_comparisons/bin/multi_instance_worker_pin.py",
+      "consts": {
+        "workdir": "~/energy_comparisons/work/data/qpdyn",
+        "qp_bin": "~/qp-dyn/cpu/build/qp_dyn_quad_omp",
+        "instances": 5
+      },
+      "args": [
+        "--bin",
+        "{qp_bin}",
+        "--instances",
+        "{instances}",
+        "--units",
+        "{n_items}",
+        "--core-bases",
+        "0,4,8,12,24",
+        "--main-cores",
+        "16,17,18,19,28",
+        "--threads-per-inst",
+        "4",
+        "--env",
+        "QP_CPU_BASE={{core}}",
+        "--env",
+        "OMP_NUM_THREADS=4",
+        "--",
+        "{workdir}",
+        "{{units}}"
+      ],
+      "t_unit_s": 59.55,
+      "nota": "maschera CPU 0-28: 4 istanze sul socket 0 + 1 sul socket 1, thread principali 16-19 e 28",
+      "t_unit_calibrazione_breve_s": 19.74,
+      "P_incr_W": 236.3,
+      "derived": {}
+    },
+    "_riscalatura": "unita' portata da 200 a 665 blocchi da 256 MB (fattore 3.3250) perche' duri 60 s sul dispositivo piu' lento (CPU). t_unit_s sono i valori IMPLICITI dalle campagne in regime concorrente, riscalati.",
+    "_nota_multi": "t_unit_s aggiornati dalla campagna multi-workload del 16-09-2026 (media sui punti, regime a piu' carichi)"
+  },
+  "deflate": {
+    "descrizione": "Deflate (LZ77 + Huffman), dati da 1 GB di XML Wikipedia, blocchi da 128 MB",
+    "unit_items": 888,
+    "item_label": "blocchi da 128 MB",
+    "misurato": {
+      "data": "2026-09-15",
+      "nodo": "cresco8-fpga1",
+      "scheda": "0000:cc:00.1",
+      "fpga_GBs": 1.885,
+      "cpu_GBs": 2.94,
+      "rapporto": 1.56,
+      "nota_rapporto": "primo workload in cui la CPU batte l'FPGA",
+      "unita_GB": 113,
+      "dataset": "wiki_1GB.xml, 1073741824 B, rapporto di compressione zlib-1: 2.559x",
+      "nota": [
+        "FPGA: migrazione U280 -> U55C costata il 21% di frequenza (189.8 -> 150 MHz).",
+        "Il primo tentativo di link non convergeva (congestione livello 7, WNS -6.259 ns,",
+        "sovrapposizioni in crescita fra le iterazioni). Risolto ancorando i data mover",
+        "in SLR0 accanto all'HBM e il DeflateKernel in SLR1, piu' strategia",
+        "Congestion_SpreadLogic_high. Su U280 non serviva alcun vincolo slr= perche' i",
+        "controller DDR sono distribuiti ai bordi del die.",
+        "I trasferimenti PCIe sono DENTRO la finestra cronometrata (doppio buffer):",
+        "stesso regime di algo3, diverso da qpdyn dove i dati restano in HBM.",
+        "CPU: zlib livello 1 (Z_BEST_SPEED), monothread, una istanza per core.",
+        "Massimo a 40 istanze (99% di efficienza di scaling); a 48 scende al 74%.",
+        "P_A e P_B ancora da misurare."
+      ]
+    },
+    "fpga": {
+      "bin": "~/energy_comparisons/work/hosts_dev/deflate_host_dev",
+      "xclbin": "~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin",
+      "consts": {
+        "dataset": "~/energy_comparisons/work/data/deflate/wiki_1GB.xml"
+      },
+      "args": [
+        "{xclbin}",
+        "{n_items}",
+        "{dataset}"
+      ],
+      "t_unit_s": 59.14,
+      "P_incr_W": 14.1,
+      "device_env": "FPGA_DEVICE"
+    },
+    "cpu": {
+      "bin": "~/energy_comparisons/bin/multi_instance_worker_pin.py",
+      "consts": {
+        "deflate_cpu": "~/deflate/cpu/build/deflate_cpu",
+        "dataset": "~/energy_comparisons/work/data/deflate/wiki_1GB.xml"
+      },
+      "args": [
+        "--bin",
+        "{deflate_cpu}",
+        "--instances",
+        "{instances}",
+        "--units",
+        "{n_items}",
+        "--",
+        "{dataset}",
+        "{{units}}",
+        "128",
+        "{{core}}"
+      ],
+      "t_unit_s": 37.67,
+      "nota": "40 istanze zlib monothread, una per core; 8 core liberi per sistema e host XRT",
+      "P_incr_W": 219.5,
+      "derived": {
+        "instances": "min(40, ncpu)"
+      }
+    },
+    "_riscalatura": "unita' portata da 904 a 888 blocchi da 128 MB (fattore 0.9823) perche' duri 60 s sul dispositivo piu' lento (FPGA). t_unit_s sono i valori IMPLICITI dalle campagne in regime concorrente, riscalati.",
+    "_nota_multi": "t_unit_s aggiornati dalla campagna multi-workload del 16-09-2026 (media sui punti, regime a piu' carichi)"
+  },
+  "nbody": {
+    "descrizione": "NBody, calcolo diretto delle accelerazioni O(n^2), float, 15 CU",
+    "unit_items": 1,
+    "item_label": "iterazioni da 1036800 corpi",
+    "misurato": {
+      "data": "2026-09-18",
+      "nodo": "cresco8-fpga2",
+      "fpga_GPairs": 24.14,
+      "cpu_GPairs": 17.1,
+      "nota": [
+        "P_A e P_B misurati su fpga2 (P_idle 745 W) con il bitstream L=7 a 291 MHz. I tempi coincidono con la versione L=5 a 300 MHz, le potenze vanno riverificate su fpga1.",
+        "Throughput FPGA al 67% del teorico (24.1 su 36 GPair/s): tre cicli in krnl_nbody hanno II=7; l'origine non e' stata individuata."
+      ]
+    },
+    "fpga": {
+      "bin": "~/energy_comparisons/work/hosts_dev/nbody_host_dev",
+      "xclbin": "~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin",
+      "consts": {
+        "n_bodies": 1036800
+      },
+      "args": [
+        "{xclbin}",
+        "{n_bodies}",
+        "{n_items}",
+        "1",
+        "0.001"
+      ],
+      "t_unit_s": 44.54,
+      "P_incr_W": 81.0,
+      "device_env": "FPGA_DEVICE"
+    },
+    "cpu": {
+      "bin": "~/nbody/cpu/build/nbody_cpu",
+      "consts": {
+        "n_bodies": 1036800
+      },
+      "args": [
+        "{n_bodies}",
+        "{threads}",
+        "{n_items}"
+      ],
+      "t_unit_s": 58.55,
+      "P_incr_W": 265.3
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# ecfg 1012_1317 nodo cresco8-fpga1 scheda 1
+# governor performance
+# xrt  Version : 2.19.194
+# avvio 2026-10-09 13:16:11

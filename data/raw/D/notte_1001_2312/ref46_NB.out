@@ -1,0 +1,38 @@
+[CPU:NB] n_bodies=1036800  thread=46  unita'=4  EPS=1e-07
+[CPU:NB] unita': 4  tempo: 230.186 s  per unita': 57.5465 s  throughput: 17.397 GPair/s
+pinning: CPU=0-45 (46 thread)  FPGA host=libero
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  NB      4   44.54   58.55    3608    15533    520.1  0.5680
+  priorita' energia: NB
+  priorita' tempo  : NB
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                   234.2      228.9
+ripartizione                234.2      228.9   <- T_A=0.0 T_B=234.2 c=0
+tutto FPGA                  183.6      145.1
+
+risparmio previsto: 0.0% vs CPU, -57.7% vs FPGA
+
+sequenza FPGA: (vuota)
+sequenza CPU : NB(4)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  23:52:44
+<<< END    23:56:34
+
+==================================================================
+  FPGA
+     tot   calcolo      0.0 s   transizioni    0.0 s   (0.00% del makespan)
+  CPU
+     NB    calcolo    230.2 s
+     tot   calcolo    230.2 s   transizioni    0.0 s   (0.00% del makespan)
+
+  MAKESPAN 230.2 s   (previsto 234.2 s, scarto -1.7%)
+
+  Finestra: 1790891564.081 -> 1790891794.269 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/notte_1001_2312/runs.tsv

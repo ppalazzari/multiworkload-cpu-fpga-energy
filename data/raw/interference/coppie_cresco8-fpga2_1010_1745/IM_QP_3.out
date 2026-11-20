@@ -1,0 +1,66 @@
+[FPGA:QP] Blocco       : 256 MB (16777216 parole da 128 bit)
+[FPGA:QP] Iterazioni   : 19950
+[FPGA:QP] Dati totali  : 4987.5 GB
+[FPGA:QP] INFO: Reading ~/workspace/QP_DYN/migr_quad_u55c/build/binary_container_1.xclbin
+[FPGA:QP] INFO: device[0] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:33:00.1
+[FPGA:QP] INFO: device[1] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:cc:00.1
+[FPGA:QP] INFO: QP_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:QP] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[CPU:IM] Matched files: 1
+[CPU:IM] Will process:  48
+[CPU:IM] OMP_THREADS:   48
+[CPU:IM] OPENCV_THREADS:1
+[CPU:IM] save_output:   0
+[CPU:IM] All images loaded in RAM
+[FPGA:QP] Device[0]: program successful!
+[FPGA:QP] DEVICE_USED index=0 bdf=0000:33:00.1
+[FPGA:QP] INFO: QP_CUS=1 unita' di calcolo
+[FPGA:QP] Dati generati in RAM (seme fisso)
+[CPU:IM] Total processing time (no I/O): 318.693 s
+[CPU:IM] Total images processed (including repetitions): 49728
+[CPU:IM] Avg per processing: 0.00640872 s
+[FPGA:QP] 
+[FPGA:QP] --- risultati ---
+[FPGA:QP] H2C (fuori misura) : 25061 us;  BW = 10215.1 MB/s
+[FPGA:QP] C2H (fuori misura) : 21012 us;  BW = 12183.5 MB/s
+[FPGA:QP] Tempo di cifratura : 1.35539e+09 us (1355.39 s)
+[FPGA:QP] Per iterazione     : 67939.2 us
+[FPGA:QP] Throughput         : 3768.07 MB/s
+[FPGA:QP] TEST FINISHED
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  QP     30   45.19   59.55     325    14072    536.1  0.5686
+  IM     16   60.08   21.50     607     7645    273.9  0.2635
+  priorita' energia: QP > IM
+  priorita' tempo  : QP > IM
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                  2130.5     2061.4
+ripartizione               1361.1     1101.2   <- T_A=1361.1 T_B=344.0 c=1
+tutto FPGA                 2327.8     1676.8
+
+risparmio previsto: 46.6% vs CPU, 34.3% vs FPGA
+
+sequenza FPGA: QP(30)
+sequenza CPU : IM(16)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  05:57:22
+<<< END    06:19:58
+
+==================================================================
+  FPGA
+     QP    calcolo   1355.4 s
+     tot   calcolo   1355.4 s   transizioni    0.0 s   (0.00% del makespan)
+  CPU
+     IM    calcolo    318.7 s
+     tot   calcolo    318.7 s   transizioni    0.0 s   (0.00% del makespan)
+
+  MAKESPAN 1355.6 s   (previsto 1361.1 s, scarto -0.4%)
+
+  Finestra: 1791691042.687 -> 1791692398.238 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/coppie_cresco8-fpga2_1010_1745/runs.tsv

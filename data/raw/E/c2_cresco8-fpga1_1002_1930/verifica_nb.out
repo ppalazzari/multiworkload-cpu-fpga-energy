@@ -1,0 +1,56 @@
+[FPGA:NB] n_bodies :1036800 T:2 threads: 1 dt: 0.001000
+[FPGA:NB] INFO: Reading ~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:NB] n_bodies :1036800 T:2 threads: 1 dt: 0.001000
+[FPGA:NB] INFO: Reading ~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:NB] Loading: '~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:NB] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:NB] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:NB] Loading: '~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:NB] INFO: FPGA_DEVICE=1 -> device[1], nessun ripiego
+[FPGA:NB] Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:NB] Device[0]: program successful!
+[FPGA:NB] Device[1]: program successful!
+[FPGA:NB] Simulated 1036800 particles
+[FPGA:NB] computing time: 89.057149
+[FPGA:NB] Simulated 1036800 particles
+[FPGA:NB] computing time: 89.071067
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  NB      4   44.54   58.55    3608    15533    520.1  0.5680
+  priorita' energia: NB
+  priorita' tempo  : NB
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                   234.2      228.9
+ripartizione                183.6      145.1   <- T_A=183.6 T_B=0.0 c=1
+tutto FPGA                  183.6      145.1
+
+risparmio previsto: 36.6% vs CPU, 0.0% vs FPGA
+scheda 0: NB=2
+scheda 1: NB=2
+
+sequenza FPGA: NB(4) -> NB(4)
+sequenza CPU : (vuota)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  19:36:27
+<<< END    19:37:57
+
+==================================================================
+  FPGA0
+     NB    calcolo     89.1 s
+     tot   calcolo     89.1 s   transizioni    0.0 s   (0.00% del makespan)
+  FPGA1
+     NB    calcolo     89.1 s
+     tot   calcolo     89.1 s   transizioni    0.0 s   (0.00% del makespan)
+  CPU
+     tot   calcolo      0.0 s   transizioni    0.0 s   (0.00% del makespan)
+
+  MAKESPAN 89.2 s   (previsto 183.6 s, scarto -51.4%)
+
+  Finestra: 1790962587.891 -> 1790962677.126 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/c2_cresco8-fpga1_1002_1930/runs.tsv

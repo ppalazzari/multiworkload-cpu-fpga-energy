@@ -1,0 +1,43 @@
+[FPGA:NB] n_bodies :1036800 T:10 threads: 1 dt: 0.001000
+[FPGA:NB] INFO: Reading ~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:NB] Loading: '~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:NB] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:NB] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:NB] Device[0]: program successful!
+[FPGA:NB] Simulated 1036800 particles
+[FPGA:NB] computing time: 445.358396
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  NB     10   44.54   58.55    3608    15533    520.1  0.5680
+  priorita' energia: NB
+  priorita' tempo  : NB
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                   585.5      572.2
+ripartizione                450.8      357.0   <- T_A=450.8 T_B=0.0 c=1
+tutto FPGA                  450.8      357.0
+
+risparmio previsto: 37.6% vs CPU, 0.0% vs FPGA
+
+sequenza FPGA: NB(10)
+sequenza CPU : (vuota)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  22:56:24
+<<< END    23:03:49
+
+==================================================================
+  FPGA
+     NB    calcolo    445.4 s
+     tot   calcolo    445.4 s   transizioni    0.0 s   (0.00% del makespan)
+  CPU
+     tot   calcolo      0.0 s   transizioni    0.0 s   (0.00% del makespan)
+
+  MAKESPAN 445.5 s   (previsto 450.8 s, scarto -1.2%)
+
+  Finestra: 1791752184.200 -> 1791752629.722 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/car_cresco8-fpga2_1011_2205/runs.tsv

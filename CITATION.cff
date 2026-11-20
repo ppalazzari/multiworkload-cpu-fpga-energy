@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Energy-optimal allocation of multiple workloads on CPU-FPGA nodes: code and data"
+type: software
+authors:
+  - family-names: Palazzari
+    given-names: Paolo
+    affiliation: "ENEA, ICT-HPC Division, Rome, Italy"
+  - family-names: Faltelli
+    given-names: Marco
+    affiliation: "ENEA, ICT-HPC Division, Rome, Italy"
+  - family-names: Fois
+    given-names: Matteo
+    affiliation: "ENEA, ICT-HPC Division, Rome, Italy"
+  - family-names: Iannone
+    given-names: Francesco
+    affiliation: "ENEA, ICT-HPC Division, Rome, Italy"
+  - family-names: Tommasino
+    given-names: Pasquale
+    affiliation: "Sapienza University of Rome, DIET, Rome, Italy"
+keywords:
+  - energy efficiency
+  - CPU-FPGA nodes
+  - workload allocation
+  - idle power
+preferred-citation:
+  type: article
+  title: "Energy-Optimal Allocation of Multiple Workloads on CPU-FPGA Nodes"
+  authors:
+    - family-names: Palazzari
+      given-names: Paolo
+    - family-names: Faltelli
+      given-names: Marco
+    - family-names: Fois
+      given-names: Matteo
+    - family-names: Iannone
+      given-names: Francesco
+    - family-names: Tommasino
+      given-names: Pasquale
+  journal: "IEEE Transactions on Parallel and Distributed Systems"
+  notes: "Submitted"

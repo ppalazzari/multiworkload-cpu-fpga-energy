@@ -1,0 +1,4 @@
+# fase1 1001_1206  nodo cresco8-fpga2.portici.enea.it
+# governor performance
+# git 455522f bin: script per il secondo nodo e per le campagne a piu' unita'
+# log potenza /tmp/fase1_power_1001_1206.log

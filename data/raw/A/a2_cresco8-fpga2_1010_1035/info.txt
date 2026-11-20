@@ -1,0 +1,7 @@
+# a2 1010_1035  nodo cresco8-fpga2  ripetizione della campagna A
+# governor performance
+# xrt  Version : 2.19.194
+# kernel 5.14.0-427.13.1.el9_4.x86_64
+# avvio 2026-10-09 13:16:11
+# git e240aed registro multi-workload; varianti con pinning di run_multi e del worker multi-istanza
+# log potenza /tmp/a2_power_1010_1035.log

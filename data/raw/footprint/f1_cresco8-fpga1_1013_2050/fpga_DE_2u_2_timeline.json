@@ -1,0 +1,31 @@
+{
+  "tag": "fpga_DE_2u_2",
+  "units": {
+    "deflate": 2
+  },
+  "alloc": {
+    "deflate": 2
+  },
+  "previsione": {
+    "T": 123.68,
+    "E": 89727.90800000001,
+    "TA": 123.68,
+    "TB": 0.0,
+    "c": 1
+  },
+  "t_start": 1791929530.676171,
+  "t_end": 1791929651.2240736,
+  "makespan_s": 120.54790258407593,
+  "sequenze": {
+    "FPGA": [
+      {
+        "workload": "deflate",
+        "transizione_s": 0.0,
+        "calcolo_s": 120.48442339897156,
+        "t_start": 1791929530.6762075,
+        "t_end": 1791929651.160631
+      }
+    ],
+    "CPU": []
+  }
+}

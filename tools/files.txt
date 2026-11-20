@@ -1,0 +1,27 @@
+# files of ~/energy_comparisons/bin used in this work
+# orchestrator/: run time (orchestrator, workers, power logging and analysis, workload descriptors)
+orchestrator	run_multi.py
+orchestrator	run_multi_pin.py
+orchestrator	multi_instance_worker.py
+orchestrator	multi_instance_worker_pin.py
+orchestrator	power_logger.py
+orchestrator	analyze_power.py
+orchestrator	workloads.json
+orchestrator	workloads_pin.json
+orchestrator	workloads_qp8.json
+orchestrator	workloads_b2pin.json
+# analysis/scripts/: the versions on the node replace those of this archive
+analysis/scripts	analisi_car.py
+analysis/scripts	analisi_casuali.py
+analysis/scripts	analisi_coppie.py
+analysis/scripts	analisi_ecfg.py
+analysis/scripts	analisi_fpga1.py
+analysis/scripts	analisi_interferenza.py
+analysis/scripts	campionatore_stat.py
+analysis/scripts	misura_ecfg.py
+analysis/scripts	modello_impronta.py
+analysis/scripts	ricalcolo_sim.py
+tools	patch_pinning.py
+tools	patch_pin_worker.py
+tools	patch_multifpga.py
+tools	build_dev_hosts.py

@@ -1,0 +1,39 @@
+{
+  "tag": "DE_DE_1",
+  "units": {
+    "deflate": 16
+  },
+  "alloc": {
+    "deflate": 8
+  },
+  "previsione": {
+    "T": 478.52,
+    "E": 413525.752,
+    "TA": 478.52,
+    "TB": 301.36,
+    "c": 1
+  },
+  "t_start": 1791659529.6148338,
+  "t_end": 1791659998.5985737,
+  "makespan_s": 468.9837398529053,
+  "sequenze": {
+    "FPGA": [
+      {
+        "workload": "deflate",
+        "transizione_s": 0.0,
+        "calcolo_s": 468.8701732158661,
+        "t_start": 1791659529.6148746,
+        "t_end": 1791659998.4850478
+      }
+    ],
+    "CPU": [
+      {
+        "workload": "deflate",
+        "transizione_s": 0.0,
+        "calcolo_s": 306.9813919067383,
+        "t_start": 1791659529.6148942,
+        "t_end": 1791659836.596286
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+Found Platform
+Platform Name: Xilinx
+INFO: Reading ~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin
+Loading: '~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin'
+INFO: FPGA_DEVICE=1 -> device[1], nessun ripiego
+Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+Device[1]: program successful!
+MAX_MEM_ALLOC_SIZE = 4 GB
+GLOBAL_MEM_SIZE    = 0 GB
+@@READY
+@@DONE
+Input File Size = 134217728 [B]
+Output File Size = 69973762 [B]
+Deflating elapsed time : 155285.000000 usec
+Throughput = 824.290820 [MB/sec]
+
+Logger stopped
+CONVERTER TEST PASSED

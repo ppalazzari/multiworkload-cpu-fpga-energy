@@ -1,0 +1,4 @@
+# c2 1002_1930  nodo cresco8-fpga1
+# governor schedutil
+# git e240aed registro multi-workload; varianti con pinning di run_multi e del worker multi-istanza
+# log potenza /tmp/c2_power_1002_1930.log

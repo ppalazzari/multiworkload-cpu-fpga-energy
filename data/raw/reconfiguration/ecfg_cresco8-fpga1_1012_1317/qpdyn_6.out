@@ -1,0 +1,22 @@
+Blocco       : 256 MB (16777216 parole da 128 bit)
+Iterazioni   : 1
+Dati totali  : 0.25 GB
+INFO: Reading ~/workspace/QP_DYN/migr_quad_u55c/build/binary_container_1.xclbin
+INFO: device[0] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:33:00.1
+INFO: device[1] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:cc:00.1
+INFO: QP_DEVICE=1 -> device[1], nessun ripiego
+Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+Device[1]: program successful!
+DEVICE_USED index=1 bdf=0000:cc:00.1
+INFO: QP_CUS=1 unita' di calcolo
+Dati generati in RAM (seme fisso)
+@@READY
+@@DONE
+
+--- risultati ---
+H2C (fuori misura) : 24867 us;  BW = 10294.8 MB/s
+C2H (fuori misura) : 20931 us;  BW = 12230.7 MB/s
+Tempo di cifratura : 67929 us (0.067929 s)
+Per iterazione     : 67929 us
+Throughput         : 3768.64 MB/s
+TEST FINISHED

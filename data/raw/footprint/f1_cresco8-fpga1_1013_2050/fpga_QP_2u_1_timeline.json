@@ -1,0 +1,31 @@
+{
+  "tag": "fpga_QP_2u_1",
+  "units": {
+    "qpdyn": 2
+  },
+  "alloc": {
+    "qpdyn": 2
+  },
+  "previsione": {
+    "T": 95.78,
+    "E": 68846.096,
+    "TA": 95.78,
+    "TB": 0.0,
+    "c": 1
+  },
+  "t_start": 1791918662.607215,
+  "t_end": 1791918753.107511,
+  "makespan_s": 90.50029611587524,
+  "sequenze": {
+    "FPGA": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 90.3367121219635,
+        "t_start": 1791918662.607251,
+        "t_end": 1791918752.943963
+      }
+    ],
+    "CPU": []
+  }
+}

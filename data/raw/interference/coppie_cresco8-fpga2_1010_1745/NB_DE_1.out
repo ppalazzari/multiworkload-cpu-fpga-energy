@@ -1,0 +1,65 @@
+[FPGA:DE] Found Platform
+[FPGA:DE] Platform Name: Xilinx
+[FPGA:DE] INFO: Reading ~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:DE] Loading: '~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:DE] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:DE] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:DE] Device[0]: program successful!
+[FPGA:DE] MAX_MEM_ALLOC_SIZE = 4 GB
+[FPGA:DE] GLOBAL_MEM_SIZE    = 0 GB
+[CPU:NB] n_bodies=1036800  thread=48  unita'=5  EPS=1e-07
+[FPGA:DE] XRT build version: 2.19.194
+[FPGA:DE] Build hash: 7d8151e6ee73c6ec2e99501a58c9c2eca6cc68ce
+[FPGA:DE] Build date: 2025-05-18 11:45:44
+[FPGA:DE] Git branch: 2025.1
+[FPGA:DE] PID: 163646
+[FPGA:DE] UID: 28063
+[FPGA:DE] [Sat Oct 10 18:22:23 2026 GMT]
+[FPGA:DE] HOST: cresco8-fpga2.portici.enea.it
+[FPGA:DE] EXE: ~/energy_comparisons/work/hosts_dev/deflate_host_dev
+[FPGA:DE] [XRT] WARNING: unaligned host pointer '0x7ffe5556a490' detected, this leads to extra memcpy
+[CPU:NB] unita': 5  tempo: 320.647 s  per unita': 64.1293 s  throughput: 15.611 GPair/s
+[FPGA:DE] Input File Size = 1072668082176 [B]
+[FPGA:DE] Output File Size = 884557424 [B]
+[FPGA:DE] Deflating elapsed time : 533537780.000000 usec
+[FPGA:DE] Throughput = 1917.345010 [MB/sec]
+[FPGA:DE] 
+[FPGA:DE] Logger stopped
+[FPGA:DE] CONVERTER TEST PASSED
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  NB      5   44.54   58.55    3608    15533    520.1  0.5680
+  DE      9   59.14   37.67     834     8269    353.8  0.3891
+  priorita' energia: NB > DE
+  priorita' tempo  : NB > DE
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                   631.8      601.9
+ripartizione                537.7      468.0   <- T_A=537.7 T_B=292.8 c=1
+tutto FPGA                  765.8      570.8
+
+risparmio previsto: 22.3% vs CPU, 18.0% vs FPGA
+
+sequenza FPGA: DE(9)
+sequenza CPU : NB(5)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  20:22:23
+<<< END    20:31:17
+
+==================================================================
+  FPGA
+     DE    calcolo    533.5 s
+     tot   calcolo    533.5 s   transizioni    0.0 s   (0.00% del makespan)
+  CPU
+     NB    calcolo    320.6 s
+     tot   calcolo    320.6 s   transizioni    0.0 s   (0.00% del makespan)
+
+  MAKESPAN 533.7 s   (previsto 537.7 s, scarto -0.7%)
+
+  Finestra: 1791656543.446 -> 1791657077.097 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/coppie_cresco8-fpga2_1010_1745/runs.tsv

@@ -1,0 +1,28 @@
+Found Platform
+Platform Name: Xilinx
+INFO: Reading ~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin
+Loading: '~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin'
+INFO: FPGA_DEVICE=1 -> device[1], nessun ripiego
+Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+Device[1]: program successful!
+MAX_MEM_ALLOC_SIZE = 4 GB
+GLOBAL_MEM_SIZE    = 0 GB
+@@READY
+XRT build version: 2.19.194
+Build hash: 7d8151e6ee73c6ec2e99501a58c9c2eca6cc68ce
+Build date: 2025-05-18 11:45:44
+Git branch: 2025.1
+PID: 126883
+UID: 28063
+[Mon Oct 12 11:36:05 2026 GMT]
+HOST: cresco8-fpga1.portici.enea.it
+EXE: ~/energy_comparisons/work/hosts_dev/deflate_host_dev
+[XRT] WARNING: unaligned host pointer '0x7ffe0c1567a0' detected, this leads to extra memcpy
+@@DONE
+Input File Size = 134217728 [B]
+Output File Size = 69973762 [B]
+Deflating elapsed time : 155927.000000 usec
+Throughput = 820.896958 [MB/sec]
+
+Logger stopped
+CONVERTER TEST PASSED

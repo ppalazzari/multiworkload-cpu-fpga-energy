@@ -1,0 +1,7 @@
+# jx 1022_1401  nodo cresco8-fpga2  allocazione giustapposta contro ottimi congiunti
+# governor performance (iniziale schedutil, ripristino con il profilo cresco8)
+# tuned 
+# xrt  Version : 2.19.194
+# kernel 5.14.0-427.13.1.el9_4.x86_64
+# avvio 2026-10-09 13:16:11
+# log potenza /tmp/jx_power_1022_1401.log

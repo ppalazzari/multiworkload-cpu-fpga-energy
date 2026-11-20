@@ -1,0 +1,204 @@
+[FPGA:QP] Blocco       : 256 MB (16777216 parole da 128 bit)
+[FPGA:QP] Iterazioni   : 9975
+[FPGA:QP] Dati totali  : 2493.75 GB
+[FPGA:QP] INFO: Reading ~/workspace/QP_DYN/migr_quad_u55c/build/binary_container_1.xclbin
+[FPGA:QP] Blocco       : 256 MB (16777216 parole da 128 bit)
+[FPGA:QP] Iterazioni   : 9975
+[FPGA:QP] Dati totali  : 2493.75 GB
+[FPGA:QP] INFO: Reading ~/workspace/QP_DYN/migr_quad_u55c/build/binary_container_1.xclbin
+[FPGA:QP] INFO: device[0] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:33:00.1
+[FPGA:QP] INFO: device[1] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:cc:00.1
+[FPGA:QP] INFO: QP_DEVICE=1 -> device[1], nessun ripiego
+[FPGA:QP] Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:QP] INFO: device[0] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:33:00.1
+[FPGA:QP] INFO: device[1] xilinx_u55c_gen3x16_xdma_base_3  BDF 0000:cc:00.1
+[FPGA:QP] INFO: QP_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:QP] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[CPU:IM] Matched files: 1
+[CPU:IM] Will process:  48
+[CPU:IM] OMP_THREADS:   10
+[CPU:IM] OPENCV_THREADS:1
+[CPU:IM] save_output:   0
+[CPU:IM] All images loaded in RAM
+[FPGA:QP] Device[0]: program successful!
+[FPGA:QP] DEVICE_USED index=0 bdf=0000:33:00.1
+[FPGA:QP] Device[1]: program successful!
+[FPGA:QP] DEVICE_USED index=1 bdf=0000:cc:00.1
+[FPGA:QP] INFO: QP_CUS=1 unita' di calcolo
+[FPGA:QP] INFO: QP_CUS=1 unita' di calcolo
+[FPGA:QP] Dati generati in RAM (seme fisso)
+[FPGA:QP] Dati generati in RAM (seme fisso)
+[FPGA:QP] 
+[FPGA:QP] --- risultati ---
+[FPGA:QP] H2C (fuori misura) : 25137 us;  BW = 10184.2 MB/s
+[FPGA:QP] C2H (fuori misura) : 21126 us;  BW = 12117.8 MB/s
+[FPGA:QP] Tempo di cifratura : 6.77626e+08 us (677.626 s)
+[FPGA:QP] Per iterazione     : 67932.5 us
+[FPGA:QP] Throughput         : 3768.45 MB/s
+[FPGA:QP] TEST FINISHED
+[FPGA:QP] 
+[FPGA:QP] --- risultati ---
+[FPGA:QP] H2C (fuori misura) : 24014 us;  BW = 10660.4 MB/s
+[FPGA:QP] C2H (fuori misura) : 21146 us;  BW = 12106.3 MB/s
+[FPGA:QP] Tempo di cifratura : 6.77696e+08 us (677.696 s)
+[FPGA:QP] Per iterazione     : 67939.5 us
+[FPGA:QP] Throughput         : 3768.06 MB/s
+[FPGA:QP] TEST FINISHED
+[FPGA:NB] n_bodies :1036800 T:15 threads: 1 dt: 0.001000
+[FPGA:NB] INFO: Reading ~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:NB] n_bodies :1036800 T:15 threads: 1 dt: 0.001000
+[FPGA:NB] INFO: Reading ~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:NB] Loading: '~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:NB] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:NB] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:NB] Loading: '~/workspace/NBody_ver7_OutPeq15_InnerPeq8_U280/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:NB] INFO: FPGA_DEVICE=1 -> device[1], nessun ripiego
+[FPGA:NB] Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:NB] Device[0]: program successful!
+[FPGA:NB] Device[1]: program successful!
+[FPGA:NB] Simulated 1036800 particles
+[FPGA:NB] computing time: 667.920950
+[FPGA:DE] Found Platform
+[FPGA:DE] Platform Name: Xilinx
+[FPGA:DE] INFO: Reading ~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:NB] Simulated 1036800 particles
+[FPGA:NB] computing time: 667.934226
+[FPGA:DE] Found Platform
+[FPGA:DE] Platform Name: Xilinx
+[FPGA:DE] INFO: Reading ~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin
+[FPGA:DE] Loading: '~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:DE] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:DE] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:DE] Loading: '~/workspace/Deflate_Vitis_2023_1/migr_u55c/build.hw/binary_container_1.xclbin'
+[FPGA:DE] INFO: FPGA_DEVICE=1 -> device[1], nessun ripiego
+[FPGA:DE] Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:DE] Device[1]: program successful!
+[FPGA:DE] MAX_MEM_ALLOC_SIZE = 4 GB
+[FPGA:DE] GLOBAL_MEM_SIZE    = 0 GB
+[FPGA:DE] XRT build version: 2.19.194
+[FPGA:DE] Build hash: 7d8151e6ee73c6ec2e99501a58c9c2eca6cc68ce
+[FPGA:DE] Build date: 2025-05-18 11:45:44
+[FPGA:DE] Git branch: 2025.1
+[FPGA:DE] PID: 333624
+[FPGA:DE] UID: 28063
+[FPGA:DE] [Fri Oct  2 22:19:26 2026 GMT]
+[FPGA:DE] HOST: cresco8-fpga1.portici.enea.it
+[FPGA:DE] EXE: ~/energy_comparisons/work/hosts_dev/deflate_host_dev
+[FPGA:DE] [XRT] WARNING: unaligned host pointer '0x7fff8ecf5310' detected, this leads to extra memcpy
+[FPGA:DE] Device[0]: program successful!
+[FPGA:DE] MAX_MEM_ALLOC_SIZE = 4 GB
+[FPGA:DE] GLOBAL_MEM_SIZE    = 0 GB
+[FPGA:DE] XRT build version: 2.19.194
+[FPGA:DE] Build hash: 7d8151e6ee73c6ec2e99501a58c9c2eca6cc68ce
+[FPGA:DE] Build date: 2025-05-18 11:45:44
+[FPGA:DE] Git branch: 2025.1
+[FPGA:DE] PID: 333622
+[FPGA:DE] UID: 28063
+[FPGA:DE] [Fri Oct  2 22:19:26 2026 GMT]
+[FPGA:DE] HOST: cresco8-fpga1.portici.enea.it
+[FPGA:DE] EXE: ~/energy_comparisons/work/hosts_dev/deflate_host_dev
+[FPGA:DE] [XRT] WARNING: unaligned host pointer '0x7fff168ba160' detected, this leads to extra memcpy
+[CPU:IM] Total processing time (no I/O): 2049.19 s
+[CPU:IM] Total images processed (including repetitions): 80784
+[CPU:IM] Avg per processing: 0.0253663 s
+[FPGA:DE] Input File Size = 1787780136960 [B]
+[FPGA:DE] Output File Size = 42606608 [B]
+[FPGA:DE] Deflating elapsed time : 927463804.000000 usec
+[FPGA:DE] Throughput = 1838.303546 [MB/sec]
+[FPGA:DE] 
+[FPGA:DE] Logger stopped
+[FPGA:DE] CONVERTER TEST PASSED
+[FPGA:IM] INFO: Reading ~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin
+[FPGA:IM] Loading: '~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin'
+[FPGA:IM] INFO: FPGA_DEVICE=0 -> device[0], nessun ripiego
+[FPGA:IM] Trying to program device[0]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:IM] Device[0]: program successful!
+[FPGA:IM] Read Lamborghini_4096x4096_24bpp
+[FPGA:DE] Input File Size = 1787780136960 [B]
+[FPGA:DE] Output File Size = 42606608 [B]
+[FPGA:DE] Deflating elapsed time : 940492703.000000 usec
+[FPGA:DE] Throughput = 1812.837032 [MB/sec]
+[FPGA:DE] 
+[FPGA:DE] Logger stopped
+[FPGA:DE] CONVERTER TEST PASSED
+[FPGA:IM] INFO: Reading ~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin
+[FPGA:IM] Loading: '~/workspace/DemoHipeac_Weq8Byte_singleKernel/ImgProc_plus_Deflate_system/Hardware/binary_container_1.xclbin'
+[FPGA:IM] INFO: FPGA_DEVICE=1 -> device[1], nessun ripiego
+[FPGA:IM] Trying to program device[1]: xilinx_u55c_gen3x16_xdma_base_3
+[FPGA:IM] Device[1]: program successful!
+[FPGA:IM] Read Lamborghini_4096x4096_24bpp
+[FPGA:IM] computation ended. Writing output file
+[FPGA:IM] done
+[FPGA:IM] Processed 6214 (4096x4096) images 
+[FPGA:IM] Image Size = 16777216 pixels
+[FPGA:IM] Overall processing elapsed time : 123297467.000000 us
+[FPGA:IM] Write BW : 2419.125123 MB/sec
+[FPGA:IM] Nb clock cycles to process the images : 24043006065.000000
+[FPGA:IM] Nb pixels/cycle processed : 13.008393
+[FPGA:IM] Number of operations performed: 150057720942384.000000
+[FPGA:IM] Number of operations/cycle performed: 6241.221274
+[FPGA:IM] sustained speed : 1133.455102 GOp/s
+[FPGA:IM] PROCESSING IMAGE FINISHED
+[FPGA:IM] computation ended. Writing output file
+[FPGA:IM] done
+[FPGA:IM] Processed 6214 (4096x4096) images 
+[FPGA:IM] Image Size = 16777216 pixels
+[FPGA:IM] Overall processing elapsed time : 121914039.000000 us
+[FPGA:IM] Write BW : 2446.576313 MB/sec
+[FPGA:IM] Nb clock cycles to process the images : 23773237605.000000
+[FPGA:IM] Nb pixels/cycle processed : 13.156006
+[FPGA:IM] Number of operations performed: 150057720942384.000000
+[FPGA:IM] Number of operations/cycle performed: 6312.043965
+[FPGA:IM] sustained speed : 1146.317062 GOp/s
+[FPGA:IM] PROCESSING IMAGE FINISHED
+pinning: CPU=0-9 (10 thread)  FPGA host=10-47
+==================================================================
+  P_idle = 712.0 W    t_cfg = 5.4 s    E_cfg = 0.0 J
+  w       N     t_A     t_B     E_A      E_B      rho   sigma
+  QP     30   45.19   59.55     325    14072    536.1  0.5686
+  NB     30   44.54   58.55    3608    15533    520.1  0.5680
+  DE     30   59.14   37.67     834     8269    353.8  0.3891
+  IM     30   60.08   21.50     607     7645    273.9  0.2635
+  priorita' energia: QP > NB > DE > IM
+  priorita' tempo  : QP > NB > DE > IM
+==================================================================
+
+configurazione              T (s)     E (kJ)
+tutto CPU                  5318.1     5152.1
+ripartizione               4728.0     3710.6   <- T_A=4728.0 T_B=559.0 c=4
+tutto FPGA                 6290.1     4639.8
+
+risparmio previsto: 28.0% vs CPU, 20.0% vs FPGA
+scheda 0: QP=15, NB=15, DE=15, IM=2
+scheda 1: QP=15, NB=15, DE=15, IM=2
+
+sequenza FPGA: QP(30) -> NB(30) -> DE(30) -> IM(4) -> QP(30) -> NB(30) -> DE(30) -> IM(4)
+sequenza CPU : IM(26)
+
+Attendo il setup dei primi worker...
+Quiete di 10 s...
+
+>>> START  23:56:42
+<<< END    00:37:14
+
+==================================================================
+  FPGA0
+     QP    calcolo    677.7 s
+     NB    calcolo    667.9 s   transizione   12.0 s
+     DE    calcolo    927.5 s   transizione    6.5 s
+     IM    calcolo    123.3 s   transizione    6.4 s
+     tot   calcolo   2396.4 s   transizioni   24.9 s   (1.02% del makespan)
+  FPGA1
+     QP    calcolo    677.6 s
+     NB    calcolo    667.9 s   transizione   12.2 s
+     DE    calcolo    940.5 s   transizione    5.7 s
+     IM    calcolo    121.9 s   transizione    5.3 s
+     tot   calcolo   2408.0 s   transizioni   23.3 s   (0.96% del makespan)
+  CPU
+     IM    calcolo   2049.2 s
+     tot   calcolo   2049.2 s   transizioni    0.0 s   (0.00% del makespan)
+
+  MAKESPAN 2431.8 s   (previsto 4728.0 s, scarto -48.6%)
+
+  Finestra: 1790978202.831 -> 1790980634.592 (epoch)
+  Marcatori in ~/energy_comparisons/work/raw/c2_cresco8-fpga1_1002_1930/runs.tsv
