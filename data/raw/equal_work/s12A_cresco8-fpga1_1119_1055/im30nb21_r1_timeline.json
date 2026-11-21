@@ -1,0 +1,66 @@
+{
+  "tag": "im30nb21_r1",
+  "units": {
+    "qpdyn": 30,
+    "nbody": 30,
+    "deflate": 30,
+    "algo3": 30
+  },
+  "alloc": {
+    "qpdyn": 0,
+    "nbody": 21,
+    "deflate": 0,
+    "algo3": 30
+  },
+  "previsione": {
+    "T": 3443.55,
+    "E": 3355781.115,
+    "TA": 2748.54,
+    "TB": 3443.55,
+    "c": 2
+  },
+  "t_start": 1795123255.001867,
+  "t_end": 1795127568.7727435,
+  "makespan_s": 4313.770876407623,
+  "sequenze": {
+    "FPGA": [
+      {
+        "workload": "nbody",
+        "transizione_s": 0.0,
+        "calcolo_s": 935.3943219184875,
+        "t_start": 1795123255.001919,
+        "t_end": 1795124190.396241
+      },
+      {
+        "workload": "algo3",
+        "transizione_s": 6.6496498584747314,
+        "calcolo_s": 1800.9166707992554,
+        "t_start": 1795124197.0459292,
+        "t_end": 1795125997.9626
+      }
+    ],
+    "CPU": [
+      {
+        "workload": "qpdyn",
+        "transizione_s": 0.0,
+        "calcolo_s": 2553.4688720703125,
+        "t_start": 1795123255.0019045,
+        "t_end": 1795125808.4707766
+      },
+      {
+        "workload": "nbody",
+        "transizione_s": 60.32102179527283,
+        "calcolo_s": 549.9352259635925,
+        "t_start": 1795125868.7918231,
+        "t_end": 1795126418.727049
+      },
+      {
+        "workload": "deflate",
+        "transizione_s": 1.8905820846557617,
+        "calcolo_s": 1125.565777540207,
+        "t_start": 1795126420.6176572,
+        "t_end": 1795127546.1834347
+      }
+    ]
+  }
+}
