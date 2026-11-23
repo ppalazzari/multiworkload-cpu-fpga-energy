@@ -33,8 +33,7 @@ for reg,f,fun,s in (('sh','../../data/derived/casuali_shared_risultati.txt',shar
         Tn=shared(x,5.9,0,False) if reg=='sh' else T1
         rows.append((t,float(Ep)+P[reg]*(T1-T0)/1e3,float(Ep)+P[reg]*(T2-T0)/1e3,float(Em),float(Ep)+P[reg]*(Tn-T0)/1e3))
     out[reg]=rows
-ew=[(2713.5,2657.2,2345),(2793.6,2679.2,2350),(3039.6,2969.4,2652),(3159.7,3021.8,2778),(3413.0,3374.4,2937),(3481.4,3363.6,2766),(3575.3,3448.9,2637),(3734.8,3640.9,3220),(3744.1,3662.2,3411),(3875.0,3778.2,2924),(3908.8,3819.6,3552),(3951.5,3862.9,3211)]
-ewNB=[5,6,9,11]  # indices with NB on FPGA and DE/IM on CPU (0-based in this sorted list)
+ew=[(2702.6,2657.2,2345.0,2646.9,2715.9),(2772.6,2679.2,2349.7,2729.5,2800.1),(3046.1,2969.4,2652.5,2977.9,3106.6),(3152.9,3021.8,2777.5,3132.9,3173.3),(3440.4,3374.4,2937.1,3358.2,3476.9),(3485.4,3363.6,2766.4,3454.3,3499.6),(3565.2,3448.9,2636.7,3541.7,3595.7),(3741.9,3640.9,3220.3,3720.8,3754.6),(3749.4,3662.2,3410.8,3727.1,3770.3),(3882.8,3778.2,2923.8,3859.2,3914.4),(3897.8,3819.6,3552.0,3877.6,3939.9),(3959.8,3862.9,3211.0,3934.9,3994.4)]
 
 import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
 import statistics as st
@@ -56,9 +55,10 @@ for reg in ('sh','st'):
     O=[r for r in out[reg] if r[0].startswith('opt')]; a.scatter([r[2] for r in O],[r[3] for r in O],s=50,marker='*',color='k',zorder=3)
 a.set_title('(a) random allocations, $N_w = 10$',fontsize=9)
 b=ax[1]
-b.scatter([e[2] for e in ew],[e[0] for e in ew],s=18,facecolors='none',edgecolors='C3',marker='D',label='no interference')
-b.scatter([e[1] for e in ew],[e[0] for e in ew],s=18,color='C0',label='interference')
-b.scatter([2458.2],[2469.6],s=60,marker='*',color='k',zorder=3)
+yerr=[[e[0]-e[3] for e in ew],[e[4]-e[0] for e in ew]]
+b.errorbar([e[2] for e in ew],[e[0] for e in ew],yerr=yerr,fmt='D',ms=4,mfc='none',mec='C3',ecolor='C3',elinewidth=0.6,capsize=1.5,label='no interference')
+b.errorbar([e[1] for e in ew],[e[0] for e in ew],yerr=yerr,fmt='o',ms=4,color='C0',elinewidth=0.6,capsize=1.5,label='interference')
+b.scatter([2458.2],[2472.2],s=60,marker='*',color='k',zorder=3)
 b.set_title('(b) equal-work allocations, $N_w = 30$, shared cores',fontsize=9)
 for x in ax:
     lo=min(x.get_xlim()[0],x.get_ylim()[0]); hi=max(x.get_xlim()[1],x.get_ylim()[1])
